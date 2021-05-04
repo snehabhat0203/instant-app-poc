@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InstantAppPOC</string>
+    <string name="title_main">Main</string>
+    <string name="title_details">Details</string>
+</resources>

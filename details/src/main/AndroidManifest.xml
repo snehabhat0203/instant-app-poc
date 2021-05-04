@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.details">
+
+    <dist:module
+        dist:instant="true" dist:onDemand="false"
+        dist:title="@string/title_details">
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.main.MainActivity">
+
+            <intent-filter
+                android:autoVerify="true"
+                android:order="2">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="instantapppoc.com" />
+                <data android:pathPrefix="/details" />
+                <data android:scheme="https" />
+                <data android:scheme="http" />
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>
